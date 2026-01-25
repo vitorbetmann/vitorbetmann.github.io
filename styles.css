@@ -9,10 +9,13 @@
 }
 
 .my-about-txt {
-    max-width: 60ch;
     margin: auto;
 }
 
 .my-about-paragraphs {
     text-align: justify;
+}
+
+#skills .card {
+    height: 100%;
 }
