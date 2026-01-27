@@ -115,12 +115,11 @@
     <section id="projects" class=" bg-body-secondary m-3 p-3 rounded-5">
         <h2 class="text-center">Projects</h2>
 
-
         <nav>
-            <div class="nav nav-tabs row" id="nav-tab" role="tablist">
-                <button class="nav-link col-6 active" id="personal-tab" data-bs-toggle="tab"
-                        data-bs-target="#nav-home"
-                        type="button" role="tab" aria-controls="nav-home" aria-selected="true">Personal
+            <div class="nav nav-tabs row mb-2" id="nav-tab" role="tablist">
+                <button class="nav-link col-6 active" id="personal-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                        type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+                    Personal
                 </button>
                 <button class="nav-link col-6" id="professional-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
                         type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Professional
@@ -128,11 +127,32 @@
             </div>
         </nav>
         <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="personal-tab"
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                 aria-labelledby="personal-tab"
                  tabindex="0">
 
-                Personal projs here
+
+                <div class="row">
+
+                    <div class="col-md-4 col-6">
+                        <a role="button" data-bs-toggle="modal" data-bs-target="#sumobot_modal">
+                            <div class="card">
+                                <img src="assets/favicon/favicon.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sumo Fighting Robots</h5>
+                                    <p class="card-text">Programmer</p>
+                                    <p>2024</p>
+                                    <span class="badge text-bg-secondary">Arduino</span>
+                                    <span class="badge text-bg-secondary">C++</span>
+                                    <span class="badge text-bg-secondary">Robotics</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
             </div>
+
             <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="professional-tab" tabindex="0">
 
                 Professional projs here
@@ -141,7 +161,7 @@
 
     </section>
 
-    <section id="skills" class="row g-0 align-items-stretch bg-body-secondary m-3 p-3 rounded-5">
+    <section id="skills" class="row g-2 bg-body-secondary m-3 p-3 rounded-5">
         <h2 class="text-center">
             Skills
         </h2>
@@ -478,7 +498,6 @@
 
     </section>
 
-
     <section id="contact" class="row text-center bg-body-secondary m-3 p-3 rounded-5">
         <h2>Contact</h2>
 
@@ -550,3 +569,86 @@
 </footer>
 </body>
 </html>
+
+<!--Modals-->
+<div class="modal fade" id="sumobot_modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Sumo Fighting Robots</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h4>MatchaBot</h4>
+                <h6>Programmer | Mar 2024</h6>
+                <p>
+                    <a href="https://github.com/vitorbetmann/Robot_Sumo/tree/main/MatchaBot"
+                       target="_blank">
+                        <span class="badge text-bg-info p-2">
+                            Repository
+                    </span>
+                    </a>
+                </p>
+                <iframe width="100%" src="https://www.youtube.com/embed/dHQ6fCmV7Aw?si=QbnvedSeWe6KwRDh"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+                </iframe>
+                <ul>
+                    <li>
+                        Reduced noise readings by the IR sensor from 8% to 3%, and increased main loop speed by 178%
+                        while searching for the opponent (in comparison to previous robot, see EspressoBot below).
+                    </li>
+                    <li>
+                        Developed an algorithm that evaded the opponent and attacked from the side, ensuring victory
+                        100% of the 3 times we enabled it.
+                    </li>
+                    <li>
+                        Won 15 out of 16 matches.
+                    </li>
+                </ul>
+
+                <hr>
+
+                <h4>EspressoBot</h4>
+                <h6>Programmer, 3D Modeller | Jan 2024</h6>
+                <p>
+                    <a href="https://github.com/vitorbetmann/Robot_Sumo/tree/main/EspressoBot"
+                       target="_blank">
+                        <span class="badge text-bg-info p-2">
+                            Repository
+                    </span>
+                    </a>
+                </p>
+                <iframe width="100%" src="https://www.youtube.com/embed/dHQ6fCmV7Aw?si=QbnvedSeWe6KwRDh"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+                </iframe>
+                <ul>
+                    <li>
+                        Modelled, assembled, and coded the robot that won 1st place at the 2024 McMaster University Mini
+                        Robot Sumo Competition.
+                    </li>
+                    <li>
+
+                        EspressoBot is two-wheeled 10x10 cm² robot equipped with an Ultrasonic sensor to find the
+                        opponent, and a pair of infrared sensors to react when close to the arena's edge.
+                    </li>
+                    <li>
+                        Won 1st place out of 32 teams.
+                    </li>
+                </ul>
+
+            </div>
+            <div class="modal-footer">
+                <span class="badge text-bg-secondary">Arduino</span>
+                <span class="badge text-bg-secondary">C++</span>
+                <span class="badge text-bg-secondary">Robotics</span></div>
+        </div>
+    </div>
+</div>
