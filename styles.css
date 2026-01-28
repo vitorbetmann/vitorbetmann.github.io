@@ -28,3 +28,7 @@
     object-fit: cover;
     height: 200px;
 }
+
+#projects, #resume, .modal {
+    text-align: justify;
+}
