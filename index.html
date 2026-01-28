@@ -116,7 +116,7 @@
         <h2 class="text-center">Projects</h2>
 
         <nav>
-            <div class="nav nav-tabs row mb-2" id="nav-tab" role="tablist">
+            <div class="nav nav-pills row mb-2" id="nav-tab" role="tablist">
                 <button class="nav-link col-6 active" id="personal-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
                         type="button" role="tab" aria-controls="nav-home" aria-selected="true">
                     Personal
@@ -462,6 +462,15 @@
                 <h6>
                     <i>Jan 2026</i> | <i>Online</i>
                 </h6>
+                <ul>
+                    <li>
+                        Click for the online
+                        <a href="https://certificates.cs50.io/ba9b4af8-8c31-45a6-8fc2-19e16f27b01b.pdf?size=letter"
+                           class="text-decoration-none">
+                            credential.
+                        </a>
+                    </li>
+                </ul>
 
 
                 <h3 class="text-bg-danger mt-3 p-1 rounded-2">Volunteer Experience</h3>
@@ -824,11 +833,14 @@
 </div>
 
 <script>
-    const sumoModal = document.getElementById('sumobot_modal');
+    const allModals = document.querySelectorAll('.modal');
 
-    sumoModal.addEventListener('hidden.bs.modal', () => {
-        sumoModal.querySelectorAll('iframe').forEach(iframe => {
-            iframe.src = iframe.src;
+    allModals.forEach(modal => {
+        modal.addEventListener('hidden.bs.modal', () => {
+            modal.querySelectorAll('iframe').forEach(iframe => {
+                const src = iframe.src;
+                iframe.src = src;
+            });
         });
     });
 </script>
